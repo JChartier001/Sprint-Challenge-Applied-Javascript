@@ -63,15 +63,12 @@ function cardCreator(item) {
     const image = document.createElement('img');
     const name = document.createElement('span');
 
-    // console.log(topCard);
-    // console.log(headlineElem);
-    // console.log(authorInfo);
-    // console.log(imageContainer);
-    // console.log(image);
-    // console.log(name);
+    
     topCard.classList.add("card");
     headlineElem.classList.add('headline');
-    authorInfo.classList.add('img-container');
+    imageContainer.classList.add('img-container');
+    authorInfo.classList.add('author');
+
 
     console.log(topCard);
     console.log(headlineElem);
@@ -81,8 +78,6 @@ function cardCreator(item) {
     headlineElem.textContent = item.headline;
     image.src = item.authorPhoto;    
     name.textContent = "By: " + item.authorName;
-
-    image.style.width = "40px";
 
     console.log(image);
     console.log(headlineElem);
