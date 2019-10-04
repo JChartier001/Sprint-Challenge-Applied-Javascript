@@ -12,20 +12,19 @@ const entryPoint2 = document.querySelector(".topics")
 
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
     .then(response => {
-        response.data.topics.forEach(async (topics) => {  
-            topicCreator(response);
-            console.log(response);
-            entryPoint2.appendChild(topicCreator(response));
-            
-        });
+        response.data.topics.forEach((item) => {
+        //    console.log(item);
+           const newTopic =topicCreator(item);
+           entryPoint2.appendChild(newTopic);
+            });
     });
 
-        function topicCreator(array, i) {
+        function topicCreator(item) {
            const tab = document.createElement('div');
 
             tab.classList.add("tab");
-
-            tab.textContent = array.data.topics[i];
+                        
+            tab.textContent = item;
 
             return tab;
             
