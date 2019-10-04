@@ -57,11 +57,11 @@ function cardCreator(response) {
     imgcontainer.classList.add('img-container');
 
     //adding text
-    headlineElem.textContent = response.headline;
+    headlineElem.textContent = headline;
     console.log(headlineElem);
-    // imgElem.textContent = response.authorPhoto;
-    console.log(imgElem);
-    authorsNameElem.textContent = response.authorName;
+    imgElem.src = authorPhoto;
+    // console.log(imgElem);
+    authorsNameElem.textContent = authorName;
 
 
     //appending
